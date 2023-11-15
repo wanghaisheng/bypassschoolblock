@@ -132,12 +132,25 @@
 			padding: 0 0px;
 			display: none;
 		}
+
+		a::before {
+			content: attr(data-unselectable);
+		}
+
+		a {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
 	</style>
 
 	<h2 id='proxies'>
 		Proxies
 	</h2>
-	<ul>
+	<ul id='prox'>
 		<p>Shuttle</p>
 		<li><a href="https://shuttleproxy.hop.sh/">https://shuttleproxy.hop.sh/</a></li>
 		<div class="space"></div>
@@ -191,26 +204,31 @@
 			<li><a href="https://subtraction.desario.com.br/">https://subtraction.desario.com.br/</a></li>
 			<li><a href="https://algebraicequations.surukle.me/">https://algebraicequations.surukle.me/</a></li>
 			<li><a href="https://statistics.thelmadejager.co.za/">https://statistics.thelmadejager.co.za/</a></li>
-			<li><a href="https://integralcalculus.vidaprimaria.cl/">https://integralcalculus.vidaprimaria.cl/</a></li>
+			<li><a href="https://integralcalculus.vidaprimaria.cl/">https://integralcalculus.vidaprimaria.cl/</a>
+			</li>
 			<li><a href="https://analyticgeometry.fletesymudanzas.cl/">https://analyticgeometry.fletesymudanzas.cl/</a>
 			</li>
 			<li><a href="https://division.lovele.ro/">https://division.lovele.ro/</a></li>
 			<li><a href="https://analyticgeometry.freonlinux.com/">https://analyticgeometry.freonlinux.com/</a></li>
 			<li><a href="https://linearalgebra.thaiopenscada.com/">https://linearalgebra.thaiopenscada.com/</a></li>
-			<li><a href="https://fractions.receitasdaelaine.com.br/">https://fractions.receitasdaelaine.com.br/</a></li>
+			<li><a href="https://fractions.receitasdaelaine.com.br/">https://fractions.receitasdaelaine.com.br/</a>
+			</li>
 			<li><a href="https://orderofoperations.basiclue.com/">https://orderofoperations.basiclue.com/</a></li>
 			<li><a href="https://wordproblems.teranlera.com.ar/">https://wordproblems.teranlera.com.ar/</a></li>
 			<li><a href="https://percentages.bot.nu/">https://percentages.bot.nu/</a></li>
-			<li><a href="https://arithmetic.trisummerseries.co.za/">https://arithmetic.trisummerseries.co.za/</a></li>
+			<li><a href="https://arithmetic.trisummerseries.co.za/">https://arithmetic.trisummerseries.co.za/</a>
+			</li>
 			<li><a href="https://educationalmathapps.islam.cl/">https://educationalmathapps.islam.cl/</a></li>
-			<li><a href="https://mathcompetitions.stahlnecker.net/">https://mathcompetitions.stahlnecker.net/</a></li>
+			<li><a href="https://mathcompetitions.stahlnecker.net/">https://mathcompetitions.stahlnecker.net/</a>
+			</li>
 			<li><a
 					href="https://probability.xn--fiqp3jtxe9n0a37aj1cr63a7x9c.tm/">https://probability.xn--fiqp3jtxe9n0a37aj1cr63a7x9c.tm/</a>
 			</li>
 			<li><a href="https://numbertheory.gfebio.com/">https://numbertheory.gfebio.com/</a></li>
 			<li><a href="https://integralcalculus.tatuarte.cl/">https://integralcalculus.tatuarte.cl/</a></li>
 			<li><a href="https://complexnumbers.uno-tec.tk/">https://complexnumbers.uno-tec.tk/</a></li>
-			<li><a href="https://educationalmathapps.shredsurf.com/">https://educationalmathapps.shredsurf.com/</a></li>
+			<li><a href="https://educationalmathapps.shredsurf.com/">https://educationalmathapps.shredsurf.com/</a>
+			</li>
 			<li><a href="https://mathworksheets.adipeq.cl/">https://mathworksheets.adipeq.cl/</a></li>
 			<li><a href="https://orderofoperations.ikrastev.net/">https://orderofoperations.ikrastev.net/</a></li>
 			<li><a
@@ -297,6 +315,7 @@
 			<li><a href="www-pro.nolife.uk">www-pro.nolife.uk</a></li>
 			<li><a href="www-salamdadash.sanaroo.ir">www-salamdadash.sanaroo.ir</a></li>
 			<li><a href="zoreasy.com">zoreasy.com</a></li>
+
 		</div>
 		<div class="space"></div>
 		<div class="space"></div>
@@ -369,7 +388,8 @@
 
 	<script>
 		// Select all <a> tags
-		var links = document.getElementsByTagName('a');
+		var ul = document.querySelector('#prox');
+		var links = ul.querySelectorAll('li > a');
 
 		// Loop through each <a> tag
 
