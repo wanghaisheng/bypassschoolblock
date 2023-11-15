@@ -385,23 +385,25 @@
 			});
 		}
 	</script>
-	<script src="https://cdn.jsdelivr.net/gh/FogNetwork/ABC/index.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/FogNetwork/ABC/index.js">
+	</script>
 
 	<script>
 		// Select all <a> tags
 		var ul = document.querySelector('#prox');
 		var links = ul.querySelectorAll('li > a');
 
-		// Loop through each <a> tag
-
 		var win;
 		for (var i = 0; i < links.length; i++) {
+
 			links[i].addEventListener('click', function (event) {
+
+
 				event.preventDefault();
-				
+
 				var page = new ABC({})
-				page.setType("blob")
-				page.setUrl("https://shuttleproxy.hop.sh/")
+				page.setType("overwrite")
+				page.setUrl(this.href)
 				page.open()
 
 
