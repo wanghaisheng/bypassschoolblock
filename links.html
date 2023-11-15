@@ -385,6 +385,7 @@
 			});
 		}
 	</script>
+	<script src="https://cdn.jsdelivr.net/gh/FogNetwork/ABC/index.js"></script>
 
 	<script>
 		// Select all <a> tags
@@ -397,20 +398,12 @@
 		for (var i = 0; i < links.length; i++) {
 			links[i].addEventListener('click', function (event) {
 				event.preventDefault();
+				
+				var page = new ABC({})
+				page.setType("blob")
+				page.setUrl("https://shuttleproxy.hop.sh/")
+				page.open()
 
-				var win = window.open()
-				var url = this.href
-				var body = win.document.body
-				body.style.margin = "0"
-				var iframe = win.document.createElement('iframe')
-				iframe.style.width = "100%";
-				iframe.style.height = "100%";
-				iframe.style.border = "none";
-				iframe.style.margin = "0px"
-				iframe.style.padding = "0px"
-
-				iframe.src = url
-				win.document.body.appendChild(iframe)
 
 			}
 
