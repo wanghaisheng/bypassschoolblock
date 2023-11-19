@@ -33,10 +33,14 @@ a:visited {
   margin-right: 20px;
 }
 .dropdown-menu {
-  background: #3b3255;
+  /* background: #3b3255; */
+  background: #9c5b00;
+  margin-right: 50px;
 }
-.dropdown-menu .dropdown-item {
-  padding: 15px 25px;
+.dropdown-menu .nav-item {
+  /* padding: 15px 25px; */
+  width: 10px;
+
 }
 ul.user-links {
   background: #3b3255;
