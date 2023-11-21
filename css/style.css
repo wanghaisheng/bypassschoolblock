@@ -245,6 +245,10 @@ ul.user-links li {
 }
 .list-1 .list-thumbnail img {
   border-radius: 50%;
+  width: 100%;
+}
+.list-thumbnail img {
+  width: 100%;
 }
 .row-list-1 {
   position: relative;
