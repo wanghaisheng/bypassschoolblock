@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 
 <body>
-    
+
     <script>const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))</script>
     <script src="https://cdn.jsdelivr.net/gh/FogNetwork/ABC/index.js"></script>
@@ -27,6 +26,45 @@
 
             location.replace("https://google.com")
         }
+        // function validURL(string) {
+        //     let url;
+        //     try {
+        //         url = new URL(string);
+        //     } catch (_) {
+        //         return false;
+        //     }
+
+        //     alert(url.protocol)
+        //     return url.protocol === "http:" || url.protocol === "https:";
+        // }
+        function ensureHttps(url) {
+            if (!/^https?:\/\//i.test(url)) {
+                url = 'https://' + url;
+            }
+            return url;
+        }
+        function validURL(string) {
+
+            var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+            return (res !== null)
+        }
+        function tabCloak() {
+            document.title = $('#tab-name').val()
+            if (validURL($('#tab-icon').val())) {
+                var link = document.querySelector("link[rel~='icon']");
+                if (!link) {
+                    link = document.createElement('link');
+                    link.rel = 'icon';
+                    document.head.appendChild(link);
+                }
+                link.href = ensureHttps($('#tab-icon').val() + '/favicon.ico');
+            }
+            else {
+                alert('Invalid URL')
+            }
+        }
+
+
     </script>
     <style>
         .child {
@@ -35,13 +73,13 @@
             vertical-align: middle;
         }
 
-        .btn:hover {
+        .cloakbtn:hover {
             background-color: rgb(220, 120, 0);
         }
     </style>
-    <div style="background-color: rgb(255, 149, 0); text-align: center; line-height: 50px">
+    <div style="background-color: rgb(255, 158, 23); text-align: center; line-height: 50px">
         <h4 class="child" style="font-size: 18px; color:black; padding: 12px">Cloaking for proxies and site!</h4>
-        <a class="child btn" onclick="cloak()" href=""
+        <a class="child btn cloakbtn" onclick="cloak()" href=""
             style="color: black;padding: 5px; outline: 1px solid black; border-radius: 4px; height: 15px; font-size: 18px">Check
             it out!</a>
     </div>
@@ -76,11 +114,58 @@
                         <ul role="menu" class="dropdown-menu" style="min-width: 200px">
                             <li class="nav-item " style=""><a class="nav-link cloak" target="" style="" href=""
                                     onclick="cloak()">about:blank Cloak</a></li>
-                            <li class="nav-item disabled" style=""><a data-bs-toggle="tooltip" data-bs-placement="right"
-                                    data-bs-title="Tooltip on right" class="nav-link disabled cloak" target="" style=""
-                                    href="">Custom Title</a></li>
+                            
+                                    <li class="nav-item " style=""><a class="nav-link " target="_top" href="" data-bs-toggle="modal"
+                            data-bs-target="#cloak">Tab Cloak</a></li>
                         </ul>
                     </li>
+
+
+                    <div class="modal fade" id="cloak" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content" style="background-color: #91541f;">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Tab Cloak</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="tab-name" class="col-form-label text-light">Tab Name:
+                                            </label>
+                                            <input type="text" class="form-control text-dark" id="tab-name" value="Google">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="tab-icon" class="col-form-label text-light">Icon Site:</label>
+                                            <input class="form-control text-dark" id="tab-icon" value="google.com">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <style>
+                                        /* input{
+                                            text-emphasis-color: black !important;
+                                            color: black !important;
+                                            background-color: green !important;
+                                        } */
+                                        .btn-primary,
+                                        .btn-primary:hover,
+                                        .btn-primary:active,
+                                        .btn-primary:visited {
+                                            border: none;
+                                            width: 100%;
+                                            background-color: rgb(121, 70, 0) !important;
+                                        }
+                                    </style>
+
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                        onclick="tabCloak()">Cloak</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
 
