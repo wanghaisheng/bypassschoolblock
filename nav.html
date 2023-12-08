@@ -16,18 +16,17 @@
         const tooltipList = [tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))</script>
     <script src="https://cdn.jsdelivr.net/gh/FogNetwork/ABC/index.js"></script>
     <script>
-
-        try {
             var favicon = localStorage.getItem("favicon");
             var tabname = localStorage.getItem("tabname");
             if (tabname == null){
-            localStorage.setItem('tabname', 'Rusk Games')}
+            localStorage.setItem('tabname', 'Rusk Games')
+            tabname = "Rusk Games"
 
-            tabname = "Rusk Games"
+        }
             if (favicon == null){
-            localStorage.setItem('favicon', 'https://rusk-games.pages.dev/favicon.ico')}
+            localStorage.setItem('favicon', 'https://rusk-games.pages.dev/favicon.ico')
             favicon = 'https://rusk-games.pages.dev/favicon.ico'
-            tabname = "Rusk Games"
+        }
             document.title = tabname
             var link = document.querySelector("link[rel~='icon']");
             if (!link) {
@@ -36,9 +35,7 @@
                 document.head.appendChild(link);
             }
             link.href = favicon;
-        }
-        catch {
-        }
+       
 
 
         function clearls() {
