@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+
 </head>
 
 <body>
@@ -12,6 +16,37 @@
         const tooltipList = [tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))</script>
     <script src="https://cdn.jsdelivr.net/gh/FogNetwork/ABC/index.js"></script>
     <script>
+
+        try {
+            const favicon = localStorage.getItem("favicon");
+            const tabname = localStorage.getItem("tabname");
+            document.title = tabname
+            var link = document.querySelector("link[rel~='icon']");
+            if (!link) {
+                link = document.createElement('link');
+                link.rel = 'icon';
+                document.head.appendChild(link);
+            }
+            link.href = favicon;
+        }
+        catch {
+        }
+
+
+        function clearls() {
+            ;
+            localStorage.setItem('tabname', 'Rusk Games')
+            localStorage.setItem('favicon', 'https://rusk-games.pages.dev/images/favicon.ico');
+            document.title = "Rusk Games"
+            var link = document.querySelector("link[rel~='icon']");
+            if (!link) {
+                link = document.createElement('link');
+                link.rel = 'icon';
+                document.head.appendChild(link);
+            }
+            link.href = 'https://rusk-games.pages.dev/images/favicon.ico';
+        }
+
         function cloak() {
             event.preventDefault()
 
@@ -26,17 +61,6 @@
 
             location.replace("https://google.com")
         }
-        // function validURL(string) {
-        //     let url;
-        //     try {
-        //         url = new URL(string);
-        //     } catch (_) {
-        //         return false;
-        //     }
-
-        //     alert(url.protocol)
-        //     return url.protocol === "http:" || url.protocol === "https:";
-        // }
         function ensureHttps(url) {
             if (!/^https?:\/\//i.test(url)) {
                 url = 'https://' + url;
@@ -58,6 +82,9 @@
                     document.head.appendChild(link);
                 }
                 link.href = ensureHttps($('#tab-icon').val() + '/favicon.ico');
+                localStorage.setItem('favicon', ensureHttps($('#tab-icon').val() + '/favicon.ico'))
+                localStorage.setItem('tabname', $('#tab-name').val())
+
             }
             else {
                 alert('Invalid URL')
@@ -114,9 +141,9 @@
                         <ul role="menu" class="dropdown-menu" style="min-width: 200px">
                             <li class="nav-item " style=""><a class="nav-link cloak" target="" style="" href=""
                                     onclick="cloak()">about:blank Cloak</a></li>
-                            
-                                    <li class="nav-item " style=""><a class="nav-link " target="_top" href="" data-bs-toggle="modal"
-                            data-bs-target="#cloak">Tab Cloak</a></li>
+
+                            <li class="nav-item " style=""><a class="nav-link " target="_top" href=""
+                                    data-bs-toggle="modal" data-bs-target="#cloak">Tab Cloak</a></li>
                         </ul>
                     </li>
 
@@ -135,10 +162,12 @@
                                         <div class="mb-3">
                                             <label for="tab-name" class="col-form-label text-light">Tab Name:
                                             </label>
-                                            <input type="text" class="form-control text-dark" id="tab-name" value="Google">
+                                            <input type="text" class="form-control text-dark" id="tab-name"
+                                                value="Google">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="tab-icon" class="col-form-label text-light">Icon Site:</label>
+                                            <label for="tab-icon" class="col-form-label text-light">Icon Site
+                                                Link:</label>
                                             <input class="form-control text-dark" id="tab-icon" value="google.com">
                                         </div>
                                     </form>
@@ -155,13 +184,44 @@
                                         .btn-primary:active,
                                         .btn-primary:visited {
                                             border: none;
-                                            width: 100%;
+
                                             background-color: rgb(121, 70, 0) !important;
                                         }
+
+                                        .bi-arrow-clockwise::before {
+                                            margin-bottom: -1em;
+                                            padding-bottom: -2em;
+
+                                        }
+
+                                        .bi-arrow-clockwise::before {
+                                            font-size: 1.3em;
+                                            -webkit-text-stroke: 0.07em;
+                                            color: rgb(239, 239, 239);
+                                            padding: 0px;
+                                            transform: rotate(-45deg);
+                                        }
+                                        .reset{
+                                            padding-top: 0.65em;
+                                            width: 10%;
+                                        }
+                                       
+                                       
                                     </style>
 
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                        onclick="tabCloak()">Cloak</button>
+
+                                    <div class="btn-toolbar" role="toolbar" style="width: 100%">
+                                        <div class="btn-group mr-2" role="group" style="width:88%; margin-right: 2%;"aria-label="First group">
+                                            <button type="button" class="btn btn-primary btn-block " data-bs-dismiss="modal"
+                                                onclick="tabCloak()">Cloak</button>
+                                        </div>
+                                        <div class="btn-group mr-2" role="group" aria-label="Second group">
+                                            <button type="button" class="btn btn-primary reset" aria-label = "Reset" data-bs-dismiss="modal"
+                                                onclick="clearls()"><i class="bi bi-arrow-clockwise"
+                                                    style=""></i></button>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
