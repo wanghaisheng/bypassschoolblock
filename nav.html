@@ -19,7 +19,10 @@
 
         try {
             const favicon = localStorage.getItem("favicon");
-            const tabname = localStorage.getItem("tabname");
+            var tabname = localStorage.getItem("tabname");
+            if (tabname == null){
+            localStorage.setItem('tabname', 'Rusk Games')}
+            tabname = "Rusk Games"
             document.title = tabname
             var link = document.querySelector("link[rel~='icon']");
             if (!link) {
