@@ -7,6 +7,19 @@ This file will not be overwritten by the updater
 */
 
 // JavaScript code
+function ss(str) {
+  return str.slice(0, -12);
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.ctrlKey && (event.shiftKey || (event.key === "q" || event.key === "b"))) {
+    if (localStorage.getItem('favicon') == "https://rusk-games.pages.dev/images/favicon.ico") { location.replace('https://canvas.houstonisd.org') }
+    else {
+      location.replace(ss(localStorage.getItem('favicon')));
+    }
+  }
+});
+
 window.onload = function() {
   $('iframe').not('.flash').attr('srcdoc', `
   <!DOCTYPE html>
@@ -63,10 +76,10 @@ window.onload = function() {
   </body>
   </html>
   `)
-    setTimeout(function() {
-        $("iframe").removeAttr("srcdoc");
+  setTimeout(function() {
+    $("iframe").removeAttr("srcdoc");
 
-    }, 3500); 
+  }, 3500);
 };
 
 function search_animal() {
