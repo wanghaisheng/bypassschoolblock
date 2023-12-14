@@ -66,7 +66,7 @@ window.onload = function() {
     setTimeout(function() {
         $("iframe").removeAttr("srcdoc");
 
-    }, 2000); // Hide the loading screen after 1 second
+    }, 5000); 
 };
 
 function search_animal() {
