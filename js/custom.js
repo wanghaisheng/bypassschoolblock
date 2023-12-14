@@ -44,7 +44,7 @@ window.onload = function() {
       }
 
       svg {
-        animation: rotate 2s linear infinite;
+        animation: rotate 1.3s linear infinite;
       }
 
     </style>
@@ -66,7 +66,7 @@ window.onload = function() {
     setTimeout(function() {
         $("iframe").removeAttr("srcdoc");
 
-    }, 5000); 
+    }, 3500); 
 };
 
 function search_animal() {
