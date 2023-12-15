@@ -13,7 +13,7 @@ function ss(str) {
 
 document.addEventListener("keydown", function(event) {
   if (event.ctrlKey && (event.shiftKey || (event.key === "q" || event.key === "b"))) {
-    if (localStorage.getItem('favicon') == "https://rusk-games.pages.dev/images/favicon.ico") { location.replace('https://canvas.houstonisd.org') }
+    if (localStorage.getItem('favicon').includes("rusk-games")) { location.replace('https://canvas.houstonisd.org') }
     else {
       location.replace(ss(localStorage.getItem('favicon')));
     }
