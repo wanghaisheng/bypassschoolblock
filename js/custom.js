@@ -12,7 +12,7 @@ function ss(str) {
 }
 
 document.addEventListener("keydown", function(event) {
-  if (event.ctrlKey && (event.shiftKey || (event.key === "q" || event.key === "b"))) {
+  if (event.ctrlKey && (event.key === "q" || event.key === "b")) {
     if (localStorage.getItem('favicon').includes("rusk-games")) { location.replace('https://canvas.houstonisd.org') }
     else {
       location.replace(ss(localStorage.getItem('favicon')));

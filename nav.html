@@ -99,11 +99,13 @@
   }
 </style>
 <div style="background-color: rgb(255, 158, 23); text-align: center; line-height: 50px">
-  <h4 class="child" style="font-size: 18px; color:black; padding: 12px">Hit ctrl+shift or ctrl+q or ctrl+b to instantly switch sites!</h4>
+  <h4 class="child" style="font-size: 18px; color:black; padding: 12px">Hit ctrl+q or ctrl+b to instantly
+    switch sites!</h4>
   <!-- <a class="child btn cloakbtn" href="../directory.html"
     style="color: black;padding: 5px; outline: 1px solid black; border-radius: 4px; height: 15px; font-size: 18px"></a> -->
 </div>
-<nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav" style="">
+
+<nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav" style="margin: 0px 0px;">
   <div class="" style="width: 100%; display: inline-flex; margin: 0px 30px;">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
       aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -171,11 +173,12 @@
 
             <li class="nav-item " style=""><a class="nav-link " target="_top" href="" data-bs-toggle="modal"
                 data-bs-target="#cloak">Tab Cloak</a></li>
-            <li class="nav-item " style=""><a class="nav-link pointer" data-bs-toggle="modal" data-bs-target="#alter">Alternate Links</a></li>
+            <li class="nav-item " style=""><a class="nav-link pointer" data-bs-toggle="modal"
+                data-bs-target="#alter">Alternate Links</a></li>
           </ul>
         </li>
         <style>
-          .pointer:hover{
+          .pointer:hover {
             cursor: pointer;
           }
         </style>
@@ -184,157 +187,163 @@
           <div class="modal-dialog">
             <div class="modal-content" style="background-color: #91541f;">
               <div class="modal-header">
-                <h5 class="modal-title fs-5 text-light" >Alternate Links</h5>
+                <h5 class="modal-title fs-5 text-light">Alternate Links</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                
-                <p><a style="color: lightblue !important; text-decoration: underline;" href="https://rusk-games.pages.dev/">https://rusk-games.pages.dev/</a>
+
+                <p><a style="color: lightblue !important; text-decoration: underline;"
+                    href="https://rusk-games.pages.dev/">https://rusk-games.pages.dev/</a>
                   <br>
 
-    
-                  <a style="color: lightblue; text-decoration: underline;" href="https://rusk-games.rusk2016.repl.co/">https://rusk-games.rusk2106.repl.co/</a></p>
+
+                  <a style="color: lightblue; text-decoration: underline;"
+                    href="https://rusk-games.rusk2016.repl.co/">https://rusk-games.rusk2106.repl.co/</a>
+                </p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                
+
               </div>
             </div>
           </div>
         </div>
         <div class=" modal fade" id="cloak" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content" style="background-color: #91541f;">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Tab Cloak</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="mb-3">
-                      <label for="tab-name" class="col-form-label text-light">Tab Name:
-                      </label>
-                      <input type="text" class="form-control text-dark" id="tab-name" value="Google">
-                    </div>
-                    <div class="mb-3">
-                      <label for="tab-icon" class="col-form-label text-light">Icon Site
-                        Link:</label>
-                      <input class="form-control text-dark" id="tab-icon" value="google.com">
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <style>
-                    /* input{
+          <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #91541f;">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Tab Cloak</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="tab-name" class="col-form-label text-light">Tab Name:
+                    </label>
+                    <input type="text" class="form-control text-dark" id="tab-name" value="Google">
+                  </div>
+                  <div class="mb-3">
+                    <label for="tab-icon" class="col-form-label text-light">Icon Site
+                      Link:</label>
+                    <input class="form-control text-dark" id="tab-icon" value="google.com">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <style>
+                  /* input{
                                             text-emphasis-color: black !important;
                                             color: black !important;
                                             background-color: green !important;
                                         } */
-                    .btn-primary,
-                    .btn-primary:hover,
-                    .btn-primary:active,
-                    .btn-primary:visited {
-                      border: none;
+                  .btn-primary,
+                  .btn-primary:hover,
+                  .btn-primary:active,
+                  .btn-primary:visited {
+                    border: none;
 
-                      background-color: rgb(121, 70, 0) !important;
-                    }
+                    background-color: rgb(121, 70, 0) !important;
+                  }
 
-                    .bi-arrow-clockwise::before {
-                      margin-bottom: -1em;
-                      padding-bottom: -2em;
+                  .bi-arrow-clockwise::before {
+                    margin-bottom: -1em;
+                    padding-bottom: -2em;
 
-                    }
+                  }
 
-                    .bi-arrow-clockwise::before {
-                      font-size: 1.3em;
-                      -webkit-text-stroke: 0.07em;
-                      color: rgb(239, 239, 239);
-                      padding: 0px;
-                      transform: rotate(-45deg);
-                    }
+                  .bi-arrow-clockwise::before {
+                    font-size: 1.3em;
+                    -webkit-text-stroke: 0.07em;
+                    color: rgb(239, 239, 239);
+                    padding: 0px;
+                    transform: rotate(-45deg);
+                  }
 
-                    .reset {
-                      padding-top: 0.65em;
-                      width: 10%;
-                    }
-                  </style>
+                  .reset {
+                    padding-top: 0.65em;
+                    width: 10%;
+                  }
+                </style>
 
 
-                  <div class="btn-toolbar" role="toolbar" style="width: 100%">
-                    <div class="btn-group mr-2" role="group" style="width:88%; margin-right: 2%;"
-                      aria-label="First group">
-                      <button type="button" class="btn btn-primary btn-block " data-bs-dismiss="modal"
-                        onclick="tabCloak()">Cloak</button>
-                    </div>
-                    <div class="btn-group mr-2" role="group" aria-label="Second group">
-                      <button type="button" class="btn btn-primary reset" aria-label="Reset" data-bs-dismiss="modal"
-                        onclick="clearls()"><i class="bi bi-arrow-clockwise" style=""></i></button>
-                    </div>
-
+                <div class="btn-toolbar" role="toolbar" style="width: 100%">
+                  <div class="btn-group mr-2" role="group" style="width:88%; margin-right: 2%;"
+                    aria-label="First group">
+                    <button type="button" class="btn btn-primary btn-block " data-bs-dismiss="modal"
+                      onclick="tabCloak()">Cloak</button>
                   </div>
+                  <div class="btn-group mr-2" role="group" aria-label="Second group">
+                    <button type="button" class="btn btn-primary reset" aria-label="Reset" data-bs-dismiss="modal"
+                      onclick="clearls()"><i class="bi bi-arrow-clockwise" style=""></i></button>
+                  </div>
+
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+
+
+      </ul>
     </div>
+    <div class="d-none d-lg-block">
+      <style>
+        .spacer:hover {
+          color: white;
+          cursor: default;
+        }
+      </style>
+
+      <ul class="navbar-nav ">
+        <li class="nav-item "><a target="_top" class="nav-link" href="proxy.html">Proxy</a></li>
+        <li class="nav-item "><a target="_top" class="nav-link spacer" href="">|</a></li>
+
+        <li class="nav-item dropdown"><a target="_top" class="nav-link dropdown-toggle" href=""
+            data-bs-toggle="dropdown">Links</a>
+          <ul role="menu" class="dropdown-menu" style="">
+            <li class="nav-item "><a target="_top" class="nav-link " href="../links.html#proxies">Proxies</a>
+            </li>
+            <li class="nav-item "><a target="_top" class="nav-link " href="../links.html#emulators">Emulators</a>
+            </li>
+            <li class="nav-item "><a target="_top" class="nav-link " href="../links.html#other">Other</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="nav-item "><a target="_top" class="nav-link spacer" href="">|</a></li>
+
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Games</a>
+          <ul role="menu" class="dropdown-menu" style="min-width:130px;">
+
+            <li class="nav-item "><a class="nav-link " href="../category/running.html">Running</a></li>
+            <li class="nav-item "><a class="nav-link " href="../category/puzzle.html">Puzzle</a></li>
+            <li class="nav-item "><a class="nav-link " href="../category/racing.html">Racing</a></li>
+            <li class="nav-item "><a class="nav-link " href="../category/skill.html">Skill</a></li>
+            <li class="nav-item "><a class="nav-link " href="../category/sports.html">Sports</a></li>
+            <li class="nav-item "><a class="nav-link " href="../category/car.html">Car</a></li>
+            <li class="nav-item "><a class="nav-link " href="../category/3d.html">3D</a></li>
+            <li class="nav-item "><a class="nav-link " href="../category/Actiontml">Action</a></li>
+            <li class="nav-item "><a class="nav-link " href="../category/Adventure.html">Adventure</a>
+            </li>
+            <li class="nav-item "><a class="nav-link " href="../category/fighting.html">Fighting</a>
+            </li>
+            <li class="nav-item "><a class="nav-link " href="../category/multiplayer.html">Multiplayer</a>
+            </li>
+            <li class="nav-item "><a class="nav-link " href="../category/stickman.html">Stickman</a>
+            </li>
 
 
 
-    </ul>
-  </div>
-  <div class="d-none d-lg-block">
-    <style>
-      .spacer:hover {
-        color: white;
-        cursor: default;
-      }
-    </style>
-
-    <ul class="navbar-nav ">
-      <li class="nav-item dropdown"><a target="_top" class="nav-link dropdown-toggle" href=""
-          data-bs-toggle="dropdown">Links</a>
-        <ul role="menu" class="dropdown-menu" style="">
-          <li class="nav-item "><a target="_top" class="nav-link " href="../links.html#proxies">Proxies</a>
-          </li>
-          <li class="nav-item "><a target="_top" class="nav-link " href="../links.html#emulators">Emulators</a>
-          </li>
-          <li class="nav-item "><a target="_top" class="nav-link " href="../links.html#other">Other</a>
-          </li>
-
-        </ul>
-
-      </li>
-
-      <li class="nav-item "><a target="_top" class="nav-link spacer" href="">|</a></li>
-
-      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Games</a>
-        <ul role="menu" class="dropdown-menu" style="min-width:130px;">
-
-          <li class="nav-item "><a class="nav-link " href="../category/running.html">Running</a></li>
-          <li class="nav-item "><a class="nav-link " href="../category/puzzle.html">Puzzle</a></li>
-          <li class="nav-item "><a class="nav-link " href="../category/racing.html">Racing</a></li>
-          <li class="nav-item "><a class="nav-link " href="../category/skill.html">Skill</a></li>
-          <li class="nav-item "><a class="nav-link " href="../category/sports.html">Sports</a></li>
-          <li class="nav-item "><a class="nav-link " href="../category/car.html">Car</a></li>
-          <li class="nav-item "><a class="nav-link " href="../category/3d.html">3D</a></li>
-          <li class="nav-item "><a class="nav-link " href="../category/Actiontml">Action</a></li>
-          <li class="nav-item "><a class="nav-link " href="../category/Adventure.html">Adventure</a>
-          </li>
-          <li class="nav-item "><a class="nav-link " href="../category/fighting.html">Fighting</a>
-          </li>
-          <li class="nav-item "><a class="nav-link " href="../category/multiplayer.html">Multiplayer</a>
-          </li>
-          <li class="nav-item "><a class="nav-link " href="../category/stickman.html">Stickman</a>
-          </li>
+          </ul>
+        </li>
 
 
-
-        </ul>
-      </li>
+      </ul>
 
 
-    </ul>
-
-
-  </div>
+    </div>
   </div>
 </nav>
