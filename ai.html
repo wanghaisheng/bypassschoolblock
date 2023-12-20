@@ -36,7 +36,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZRYLR5KM1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag() {dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-VZRYLR5KM1');
@@ -53,51 +53,50 @@
   <script src="cloak.js"></script>
   <div class="fl">
 
-  <div id="nav-placeholder"></div>
+    <div id="nav-placeholder"></div>
 
-  <style>
-    .navbar{
-      margin: 0px 0px;
-    }
-    .fl{
+    <style>
+      .navbar {
+        margin: 0px 0px;
+      }
+
+      .fl {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-    }
-    iframe {
+      }
+
+      iframe {
         background: #000;
         border: none;
         flex-grow: 1;
-    }
-  </style>
-    <iframe allowtransparency="true" style="background: #FFFFFF;" 
-        src="https://gamesite-ruskgames.koyeb.app/" 
-        class="flash"
-        frameborder="0" width="100%">
-    </iframe>
-    <script>
-      window.onmessage = function(e) {
-      if (e.data == 'start') {
-          $("#nav-placeholder").empty();
       }
-        if (e.data == 'restart') {
-          $("#nav-placeholder").load("../nav.html");
-        }
-    };
-      
+    </style>
+    <script>
+      $(window).load(function ()
+      {
+          var $contents = $('#ai').contents();
+          $contents.scrollTop($contents.height());
+      });
     </script>
-    </div>
 
-  
+    <iframe allowtransparency="true" id="ai" style="background: #ffe6a1;"
+      src="https://gamesite-ruskgames.koyeb.app/uv/service/hvtrs8%2F-idrcmg.knvepazak.aoo%2F45%3A2776229772f52fcg4dc70"
+      class="flash" frameborder="0" width="100%">
+    </iframe>
+
+  </div>
+
+
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.js"></script>
   <script type="text/javascript" src="../navbar.js"></script>
 
 
-      <script type="text/javascript" src="js/lazysizes.min.js"></script>
-      <script type="text/javascript" src="js/popper.min.js"></script>
-      <script type="text/javascript" src="js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="js/script.js"></script>
-      <script type="text/javascript" src="js/custom.js"></script>
+  <script type="text/javascript" src="js/lazysizes.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
 </body>
 
 </html>
