@@ -382,7 +382,7 @@
         </style>
         <script>
 
-          document.querySelector('.code').textContent =  `<iframe src="${window.location.href.replace('/play', '/embed')} frameborder='0'></iframe>`
+          document.querySelector('.code').textContent =  `<iframe src="${window.location.href.replace('/play', '/embed')}" frameborder='0'></iframe>`
           document.querySelector('.link').textContent =  `${window.location.href.replace('/play', '/embed')}`
           function copy(element) {
             copied();
