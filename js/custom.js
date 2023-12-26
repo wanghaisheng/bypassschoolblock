@@ -10,6 +10,11 @@ This file will not be overwritten by the updater
 function ss(str) {
   return str.slice(0, -12);
 }
+function copied() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
 
 document.addEventListener("keydown", function(event) {
   if (event.ctrlKey && (event.key === "q" || event.key === "b")) {
@@ -21,13 +26,19 @@ document.addEventListener("keydown", function(event) {
 });
 
 window.onload = function() {
+$('.b-action2').prepend(`
+  <a href="#" onclick="embed()" data-bs-toggle="modal" data-bs-target="#embed" class="btn btn-capsule">
+    <i class="bi bi-file-earmark-code" style="margin-right: 2px;"></i>Embed
+  </a>
+`);
+
   $('iframe').not('.flash').attr('srcdoc', `
   <!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-sale=1.0">
   </head>
   <body style="">
     <style>
