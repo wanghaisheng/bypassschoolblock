@@ -9,6 +9,7 @@ packages = [{include = "repl_html_rusk_games"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 bs4 = "^0.0.1"
+beautifulsoup4 = "^4.12.2"
 
 
 [build-system]

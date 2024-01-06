@@ -7,6 +7,7 @@ This file will not be overwritten by the updater
 */
 
 // JavaScript code
+
 function ss(str) {
   return str.slice(0, -12);
 }
@@ -26,6 +27,11 @@ document.addEventListener("keydown", function(event) {
 });
 
 window.onload = function() {
+  var chatbtn = document.createElement('script');
+  chatbtn.src='https://chat.rusk2016.repl.co/chat-button.js';
+  chatbtn.setAttribute('width', '300px');
+  chatbtn.setAttribute('height', '450px');
+  $('body').append(chatbtn)
 $('.b-action2').prepend(`
   <a href="#" onclick="embed()" data-bs-toggle="modal" data-bs-target="#embed" class="btn btn-capsule">
     <i class="bi bi-file-earmark-code" style="margin-right: 2px;"></i>Embed
