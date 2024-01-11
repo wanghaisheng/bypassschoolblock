@@ -1441,7 +1441,7 @@ with open(f'embed/{filedir[5:]}', 'w') as game:
 
                                 <body style="padding: 0; margin: 0; background-color: white; overflow: hidden">
                                     <script src="embed.js"></script>
-                                    <iframe src="https://rusk-games.pages.dev/{filedir}" frameborder="0" style="width: 100vw; height: 100vh" id="iframe"></iframe>
+                                    <iframe src="{url}" frameborder="0" style="width: 100vw; height: 100vh" id="iframe"></iframe>
                                 </body>
                                 </html>
                                 ''')
