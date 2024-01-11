@@ -1,98 +1,27 @@
-from bs4 import BeautifulSoup
-
-name=input("Game name?: ")
-filedir = "play/" + name.lower().replace(' ', '-')+".html"
-print(filedir)
-cat = input("What category?: ")
-url=input("Game URL: ")
-thumb=input("Thumbnail url: ")
-
-
-with open('directory.html', 'r') as file:
-    html_content= file.read()
-
-soup = BeautifulSoup(html_content, 'html.parser')
-
-div = soup.find('div', class_='grid-container')
-
-element_string=f'''
-<div class="col-lg-4 col-md-6 grid-2">
-						<a href="{filedir}">
-							<div class="game-item">
-								<div class="list-game">
-									<div class="list-thumbnail"><img
-											src="{thumb}"
-											data-src="{thumb}"
-											class="small-thumb img-rounded lazyload"></div>
-									<div class="list-info">
-										<div class="list-title">{name}</div>
-										<div class="list-category"></div>
-
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-'''
-
-new_element = BeautifulSoup(element_string, 'html.parser')
-
-div.insert(0, new_element)
-
-with open('directory.html', 'w') as directory:
-    directory.write(soup.prettify())
-
-with open('category/'+cat+".html", "r") as catfile:
-    html_content=catfile.read()
-
-soup = BeautifulSoup(html_content, 'html.parser')
-
-div = soup.find('div', class_='grid-container')
-
-element_string=f'''
-<div class="col-lg-2 col-md-4 col-6 grid-3">
-  <a href="/{filedir}">
-  <div class="game-item">
-    <div class="list-game">
-      <div class="list-thumbnail"><img src="{thumb}" data-src="{thumb}" class="lazyload" alt="{name}"></div>
-    </div>
-  </div>
-  </a>
-</div>
-'''
-
-new_element = BeautifulSoup(element_string, 'html.parser')
-
-div.insert(0, new_element)
-
-with open('category/'+cat+".html", "w") as catfile:
-    catfile.write(soup.prettify())
-
-with open(filedir, 'w') as game:
-    game.write(f'''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<title>{name}  - rusk-games.pages.dev</title>
+		<title>Learn to Fly  - rusk-games.pages.dev</title>
     <meta name="robots" content="noindex,nofollow" />
-		<meta name="description" content="{name} - rusk-games.pages.dev: on Chromebook delivers seamless, lag-free gaming with an optimized interface, ensuring an enjoyable and safe experience for players of all ages">
+		<meta name="description" content="Learn to Fly - rusk-games.pages.dev: on Chromebook delivers seamless, lag-free gaming with an optimized interface, ensuring an enjoyable and safe experience for players of all ages">
     <link rel="icon" href="../images/favicon.ico" sizes="32x32">
 
 
       <meta property="og:image:width" content="200 px" />
       <meta property="og:image:height" content="200 px" />
-      <meta property="og:title" content="{name}" />
-      <meta property="og:site_name" content="{name}" />
-      <meta property="og:description" content="{name} - rusk-games.pages.dev: on Chromebook delivers seamless, lag-free gaming with an optimized interface, ensuring an enjoyable and safe experience for players of all ages" />
+      <meta property="og:title" content="Learn to Fly" />
+      <meta property="og:site_name" content="Learn to Fly" />
+      <meta property="og:description" content="Learn to Fly - rusk-games.pages.dev: on Chromebook delivers seamless, lag-free gaming with an optimized interface, ensuring an enjoyable and safe experience for players of all ages" />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content="{thumb}">
+      <meta property="og:image" content="../images/learn2fly.jpeg">
 
 
 
   	<style type="text/css">
-.report-modal {{
+.report-modal {
   display: none;
   position: fixed;
   z-index: 20;
@@ -104,33 +33,33 @@ with open(filedir, 'w') as game:
   overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
-}}
-.report-modal-content {{
+}
+.report-modal-content {
   background-color: #fefefe;
   color: #000;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   max-width: 320px;
-}}
-.close {{
+}
+.close {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
-}}
-.close:hover,.close:focus {{
+}
+.close:hover,.close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}}
-.report-label {{
+}
+.report-label {
   padding: 0 10px;
   margin-right: 5px;
   border-radius: 15px;
   display: inline-block;
   margin-bottom: 8px;
-}}
+}
 </style>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="../css/jquery-comments.css" />
@@ -207,14 +136,14 @@ with open(filedir, 'w') as game:
           				<div id="mobile-back-button" draggable="true">
           					<i class="bi bi-x-circle-fill"></i>
           				</div>
-          				<iframe class="game-iframe" id="game-area" src="{url}" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
+          				<iframe class="game-iframe" id="game-area" src="https://flash-rusk-games.pages.dev/learn-to-fly.html" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
           			</div>
           		</div>
 
 
           		<div class="game-info">
           			<div class="header-left">
-          				<h1 class="single-title">{name}</h1>
+          				<h1 class="single-title">Learn to Fly</h1>
 
 
           			</div>
@@ -305,9 +234,9 @@ with open(filedir, 'w') as game:
   <a href="/play/age-of-war.html">
   <div class="game-item">
     <div class="list-game">
-      <div class="list-thumbnail"><img src="https://htmlxm.github.io/thumb/age-of-war.png" data-src="https://htmlxm.github.io/thumb/age-of-war.png" class="lazyload" alt="{name}"></div>
+      <div class="list-thumbnail"><img src="https://htmlxm.github.io/thumb/age-of-war.png" data-src="https://htmlxm.github.io/thumb/age-of-war.png" class="lazyload" alt="Learn to Fly"></div>
       <div class="list-info">
-        <div class="list-title">{name}</div>
+        <div class="list-title">Learn to Fly</div>
       </div>
     </div>
   </div>
@@ -1376,7 +1305,7 @@ with open(filedir, 'w') as game:
 <!--           <div class="post-item">
               <div class="post-media">
                 <div class="post-thumb">
-                  <img title="Play Now" src="{thumb}" alt="{name} ">
+                  <img title="Play Now" src="../images/learn2fly.jpeg" alt="Learn to Fly ">
                 </div>
                 <div class="post-body">
 
@@ -1426,46 +1355,3 @@ with open(filedir, 'w') as game:
 
   </body>
 </html>
-''')
-
-with open(f'embed/{filedir[5:]}', 'w') as game:
-                    game.write(f'''
-                               <!DOCTYPE html>
-                                <html lang="en">
-                                <head>
-                                    <meta charset="UTF-8">
-                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                    <title>{name}</title>
-                                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                                </head>
-
-                                <body style="padding: 0; margin: 0; background-color: white; overflow: hidden">
-                                    <script src="embed.js"></script>
-                                    <iframe src="https://rusk-games.pages.dev/{filedir}" frameborder="0" style="width: 100vw; height: 100vh" id="iframe"></iframe>
-                                </body>
-                                </html>
-                                ''')
-# soup = BeautifulSoup(html_content, 'html.parser')
-
-# divs = soup.find_all('div', class_='col-lg-4')
-
-# for i, div in enumerate(divs):
-#     a_tag = div.find_next('a')
-    
-#     if a_tag and 'href' in a_tag.attrs:
-#         href_dict[a_tag['href']] = a_tag.sourceline
-
-# href_dict['hi']='hello'
-# sorted_dict = {k: href_dict[k] for k in sorted(href_dict)}
-
-# current_key = 'hi'
-# keys=list(sorted_dict.keys())
-
-# current_index = keys.index(current_key)
-# if current_index < len(keys) - 1:
-#     next_key = keys[current_index - 1]
-#     print(next_key)  
-
-
-
-
