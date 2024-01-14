@@ -66,12 +66,12 @@ document.addEventListener("keydown", function(event) {
 });
 
 window.onload = function() {
-  if (localStorage.getItem('signin') == null || localStorage.getItem('signin') == 'null'){
-    $('body').html('')
-    window.location = ('https://12d7e6d6-4581-440e-87d0-54a7ee189854-00-5v9xx34y30z8.kirk.replit.dev/login')
-    window.close()
-  }
-  checkBlocked()
+  // if (localStorage.getItem('signin') == null || localStorage.getItem('signin') == 'null'){
+  //   $('body').html('')
+  //   window.location = ('https://12d7e6d6-4581-440e-87d0-54a7ee189854-00-5v9xx34y30z8.kirk.replit.dev/login')
+  //   window.close()
+  // }
+  // checkBlocked()
   var chatbtn = document.createElement('script');
   chatbtn.src='https://chat.rusk2016.repl.co/chat-button.js';
   chatbtn.setAttribute('width', '300px');
