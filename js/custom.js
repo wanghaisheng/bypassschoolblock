@@ -7,6 +7,45 @@ This file will not be overwritten by the updater
 */
 
 // JavaScript code
+function extend(og, ext){
+  for (let i = 0; i < ext.length; i++) {
+    if (i != '0'){og.push(ext[i])}
+    
+}}
+function listInclude(string, items) {
+  for (let i = 0; i < items.length; i++) {
+      if (string.includes(items[i])) {
+          return true;
+      }
+  }
+  return false;
+}
+blocked = []
+var pyblock;
+$.post("https://12d7e6d6-4581-440e-87d0-54a7ee189854-00-5v9xx34y30z8.kirk.replit.dev/blocklist", // The URL where the request is sent
+    {},
+    function(data, status){ // A callback function to run if the request succeeds
+        var pyblock = (data.split('\n'))
+        extend(blocked, pyblock)
+    }
+);
+function checkBlocked(){
+  if (listInclude(localStorage.getItem('signin'), blocked)){
+    $('html').html('<pre style="font-size: 15px">you have been blocked from accessing this site</pre>')
+
+  }
+
+}
+window.addEventListener('message', function(e) {
+  if (e.data.startsWith('login')){
+    info = e.data.slice(5)
+    localStorage.setItem('signin', info);
+    checkBlocked()
+  }
+
+}, false);
+
+if (window.opener){window.opener.postMessage('Ready!', '*');}
 
 function ss(str) {
   return str.slice(0, -12);
@@ -27,6 +66,12 @@ document.addEventListener("keydown", function(event) {
 });
 
 window.onload = function() {
+  if (localStorage.getItem('signin') == null || localStorage.getItem('signin') == 'null'){
+    $('body').html('')
+    window.location = ('https://12d7e6d6-4581-440e-87d0-54a7ee189854-00-5v9xx34y30z8.kirk.replit.dev/login')
+    window.close()
+  }
+  checkBlocked()
   var chatbtn = document.createElement('script');
   chatbtn.src='https://chat.rusk2016.repl.co/chat-button.js';
   chatbtn.setAttribute('width', '300px');
