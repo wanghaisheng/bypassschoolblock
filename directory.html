@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
   <title>
-    Rusk Games
+   Rusk Games
   </title>
   <meta content="Play rusk-games now, with Proxies, Emulators, Infinite Games and more!" name="description"/>
   <meta content="rusk-games.pages.dev" property="og:url"/>
@@ -32,7 +32,7 @@
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VZRYLR5KM1">
   </script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+   window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
@@ -45,16 +45,16 @@
  <body id="page-top" style="">
   <!-- Navigation-->
   <style>
-    body{
+   body{
         z-index: 1000;
         background: url('images/background1.png');
         background-size: 100vw; 
         background-position: center bottom; overflow-x: hidden;
     }
   </style>
-    <!-- <img src="images/background1.png" alt="" srcset="" class='bg-img'> -->
-    <style>
-        .bg-img{
+  <!-- <img src="images/background1.png" alt="" srcset="" class='bg-img'> -->
+  <style>
+   .bg-img{
             /* position: fixed; */
             position: absolute;
             top: 0;
@@ -64,7 +64,7 @@
             z-index: -1;
             opacity: 1;
         }
-        </style>
+  </style>
   <div id="nav-placeholder">
   </div>
   <style>
@@ -195,7 +195,9 @@
      <div class="col-md-auto" style="">
       <h1>
        All Games
-       <span style="font-size: 15px">(All games are rights of their respective owners)</span>
+       <span style="font-size: 15px">
+        (All games are rights of their respective owners)
+       </span>
       </h1>
      </div>
      <div class="col align-self-center" style="padding-right: 60px;">
@@ -205,7 +207,7 @@
      </div>
     </div>
     <style>
-      .searchbar{
+     .searchbar{
         transition: 0.8s all;
         font-size: 20px;
         width: 50%; margin: auto; text-align: center;
@@ -215,29 +217,64 @@
       }
     </style>
     <script>
-      document.addEventListener('DOMContentLoaded', function(){$('.searchbar').attr('placeholder', 'Search our ' + document.getElementsByClassName('list-title').length + ' games!!')
+     document.addEventListener('DOMContentLoaded', function(){$('.searchbar').attr('placeholder', 'Search our ' + document.getElementsByClassName('list-title').length + ' games!!')
     
       $('.searchbar').on('input', function(e){
         var value = $(this).val().toLowerCase();
         $('.game-frame').each(function(){
           if($(this).find('.list-title').text().toLowerCase().includes(value)){
-            $(this).show()
+            $(this).css('display', 'block')
           }else{
-            $(this).hide()
+            $(this).css('display', 'none')
           }
         })
       })
     
     })
-      
-  </script>
+    </script>
     <div class="row d-flex justify-content-center align-items-center" style="width: 100%">
-      <div class="col d-flex justify-content-center align-items-center" style="width: 100%">
-        <input type="text" class="mt-2 mb-2 form-control searchbar" val="hollala">
-      </div>
+     <div class="col d-flex justify-content-center align-items-center" style="width: 100%">
+      <input class="mt-2 mb-2 form-control searchbar" type="text" val="hollala"/>
+     </div>
     </div>
     <div class="container" style="width: 100%">
      <div class="row grid-container game-list" style="width: 100%">
+      <div class="col-lg-4 col-md-6 grid-2 game-frame">
+       <a href="play/stickman-skate.html">
+        <div class="game-item">
+         <div class="list-game">
+          <div class="list-thumbnail">
+           <img class="small-thumb img-rounded lazyload" data-src="../images/skate.jpeg" src="../images/skate.jpeg"/>
+          </div>
+          <div class="list-info">
+           <div class="list-title">
+            Stickman Skate
+           </div>
+           <div class="list-category">
+           </div>
+          </div>
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="col-lg-4 col-md-6 grid-2 game-frame">
+       <a href="play/last-horizon.html">
+        <div class="game-item">
+         <div class="list-game">
+          <div class="list-thumbnail">
+           <img class="small-thumb img-rounded lazyload" data-src="../images/last-horizon.jpeg" src="../images/last-horizon.jpeg"/>
+          </div>
+          <div class="list-info">
+           <div class="list-title">
+            Last Horizon
+           </div>
+           <div class="list-category">
+           </div>
+          </div>
+         </div>
+        </div>
+       </a>
+      </div>
       <div class="col-lg-4 col-md-6 grid-2 game-frame">
        <a href="play/bad-ice-cream-3.html">
         <div class="game-item">
