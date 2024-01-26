@@ -77,6 +77,7 @@
         background-color: rgb(121, 70, 0) !important;
     }
   </style>
+  
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.js">
   </script>
   <script src="../navbar.js" type="text/javascript">
@@ -217,10 +218,11 @@
       }
     </style>
     <script>
+     var urlParams = new URLSearchParams(window.location.search);
      document.addEventListener('DOMContentLoaded', function(){$('.searchbar').attr('placeholder', 'Search our ' + document.getElementsByClassName('list-title').length + ' games!!')
-    
-      $('.searchbar').on('input', function(e){
-        var value = $(this).val().toLowerCase();
+      function updateSearch(){
+        var value = $('.searchbar').val().toLowerCase();
+        if (value == ""){gameRequestadd()}
         $('.game-frame').each(function(){
           if($(this).find('.list-title').text().toLowerCase().includes(value)){
             $(this).css('display', 'block')
@@ -228,10 +230,38 @@
             $(this).css('display', 'none')
           }
         })
+      }
+      $('.searchbar').val(urlParams.get('search'))
+      $('.searchbar').on('input', function(e){
+        updateSearch()
       })
-    
+      updateSearch()
     })
     </script>
+    <script>
+      function gameRequestadd(){
+        $('.game-list').prepend(`
+         <div class="col-lg-4 col-md-6 grid-2 game-frame">
+      <a href="https://forms.office.com/r/muP8kC9tK2 ">
+       <div class="game-item">
+        <div class="list-game">
+         <div class="list-thumbnail" style="background-color: white; border-radius: 20px; padding: 10px">
+          <img class="small-thumb img-rounded lazyload" src="https://louisvillegeek.com/wp-content/uploads/2020/02/microsoft-forms-logo.png"/>
+         </div>
+         <div class="list-info">
+          <div class="list-title" style="font-size: 30px;">
+           Game Request
+          </div>
+          <div class="list-category">
+          </div>
+         </div>
+        </div>
+       </div>
+      </a>
+     </div>
+     `)
+      }
+     </script>
     <div class="row d-flex justify-content-center align-items-center" style="width: 100%">
      <div class="col d-flex justify-content-center align-items-center" style="width: 100%">
       <input class="mt-2 mb-2 form-control searchbar" type="text" val="hollala"/>
@@ -545,31 +575,6 @@
         </div>
        </a>
       </div>
-      <script>
-       $(document).ready(function(){
-          $('.game-list').prepend(`
-          <div class="col-lg-4 col-md-6 grid-2 game-frame">
-       <a href="https://forms.office.com/r/muP8kC9tK2 ">
-        <div class="game-item">
-         <div class="list-game">
-          <div class="list-thumbnail" style="background-color: white; border-radius: 20px; padding: 10px">
-           <img class="small-thumb img-rounded lazyload" src="https://louisvillegeek.com/wp-content/uploads/2020/02/microsoft-forms-logo.png"/>
-          </div>
-          <div class="list-info">
-           <div class="list-title" style="font-size: 30px;">
-            Game Request
-           </div>
-           <div class="list-category">
-           </div>
-          </div>
-         </div>
-        </div>
-       </a>
-      </div>
-      `)
-
-        })
-      </script>
       <div class="col-lg-4 col-md-6 grid-2 game-frame">
        <a href="play/mr.-mine.html">
         <div class="game-item">
