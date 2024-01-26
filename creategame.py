@@ -8,17 +8,11 @@ print(filedir)
 cat = input("What category?: ")
 url=input("Game URL: ")
 thumburl = input("Thumbnail url: ")
+
 if not thumburl.startswith('../'):
   img = requests.get(thumburl)
   ext = urlopen(thumburl)
   thumbdir = 'images/' + filedir[5:-5] + "." + ext.info().get_content_type().split('/')[1]
-  with open(thumbdir, 'wb') as newimg:
-      newimg.write(img.content)
-  thumb= '../' + thumbdir
-
-elif thumburl.startswith('data:image'):
-  img = requests.get(thumburl)
-  thumbdir = 'images/' + filedir[5:-5] + "." +thumburl.split('/')[1].split(';')[0]
   with open(thumbdir, 'wb') as newimg:
       newimg.write(img.content)
   thumb= '../' + thumbdir
