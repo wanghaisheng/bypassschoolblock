@@ -2,7 +2,13 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
-page = requests.get('https://just-fall.github.io/category/new.html')
+with open('create/links', 'w'):
+  pass
+with open('create/thumbs', 'w'):
+  pass
+with open('create/names', 'w'):
+  pass
+page = requests.get('https://just-fall.github.io/category/shooting.html')
 soup = BeautifulSoup(page.text, 'html.parser')
 
 for x in soup.find_all('a'):

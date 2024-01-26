@@ -4,6 +4,7 @@ from urllib.request import urlopen
 linky = []
 namey = []
 thumby = []
+cat = 'shooting'
 
 with open('create/links', 'r') as links:
   linky = links.read().splitlines()
@@ -19,7 +20,6 @@ for i, lid in enumerate(linky):
   alls.close()
   if name not in allss:
     filedir = "play/" + name.lower().replace(' ', '-')+".html"
-    cat = 'new'
     url=lid
     thumburl = thumby[i]
     if not thumburl.startswith('../'):
