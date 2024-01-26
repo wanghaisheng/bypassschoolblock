@@ -222,7 +222,6 @@
      document.addEventListener('DOMContentLoaded', function(){$('.searchbar').attr('placeholder', 'Search our ' + ($('.game-frame').length - 1) + ' games!!')
       function updateSearch(){
         var value = $('.searchbar').val().toLowerCase();
-        if (value == ""){gameRequestadd()}
         $('.game-frame').each(function(){
           if($(this).find('.list-title').text().toLowerCase().includes(value)){
             $(this).css('display', 'block')
@@ -235,6 +234,7 @@
       $('.searchbar').on('input', function(e){
         updateSearch()
       })
+      if ($('.searchbar').val() == "") {gameRequestadd()}
       updateSearch()
     })
     </script>
