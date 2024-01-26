@@ -1,6 +1,8 @@
 
 $(document).ready(function () {
-  
+  $.get("../directory.html", function(data) {
+    $('.srchgms').attr('placeholder', $(data).find('.game-frame').length -1 + ' Games!')
+  })
     $(document).click(function(e){
 
       

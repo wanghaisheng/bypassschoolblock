@@ -219,7 +219,7 @@
     </style>
     <script>
      var urlParams = new URLSearchParams(window.location.search);
-     document.addEventListener('DOMContentLoaded', function(){$('.searchbar').attr('placeholder', 'Search our ' + document.getElementsByClassName('list-title').length + ' games!!')
+     document.addEventListener('DOMContentLoaded', function(){$('.searchbar').attr('placeholder', 'Search our ' + ($('.game-frame').length - 1) + ' games!!')
       function updateSearch(){
         var value = $('.searchbar').val().toLowerCase();
         if (value == ""){gameRequestadd()}
