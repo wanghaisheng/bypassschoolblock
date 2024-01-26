@@ -1,1 +1,9 @@
 modules = ["python-3.10:v25-20230920-d4ad2e4"]
+hidden = [".config"]
+
+[deployment]
+publicDir = "/"
+deploymentTarget = "static"
+
+[nix]
+channel = "stable-23_11"
