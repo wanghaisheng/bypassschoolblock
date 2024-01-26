@@ -1,4 +1,5 @@
 import requests
+import os
 import json
 from bs4 import BeautifulSoup
 
@@ -8,7 +9,7 @@ with open('create/thumbs', 'w'):
   pass
 with open('create/names', 'w'):
   pass
-page = requests.get('https://just-fall.github.io/category/shooting.html')
+page = requests.get('https://just-fall.github.io/category/multiplayer.html')
 soup = BeautifulSoup(page.text, 'html.parser')
 
 for x in soup.find_all('a'):
@@ -25,3 +26,5 @@ for x in soup.find_all('img'):
   with open('create/thumbs', 'a') as thumbs:
     thumbs.write(x.get('src')+'\n')
 
+
+os.system('python createFromLinks.py')
