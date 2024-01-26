@@ -6,7 +6,7 @@ $(document).ready(function () {
     $(document).click(function(e){
 
       
-      if($(e.target).attr('class') != 'game-prev')
+      if($(e.target).attr('class') != 'game-prev' && $(e.target).attr('class') != 'form-control form-control-md srchgms mr-5')
         {
           $('.game-prev').css('display', 'none')
            
@@ -29,18 +29,21 @@ $(document).ready(function () {
       var query = $(this).val()
       if(query != '')
       { 
-        $('.game-prev').html('')
         $('.game-prev').show()
         $.get("../directory.html", function(data) {
+          $('.game-prev').html('')
             $(data).find(".game-frame").each(function(index, element) { 
+              
               var url = $(element).find('a').attr('href')
               var name = $(element).find('.list-title').text()
               var img = $(element).find('img').attr('src')
               var value = $('.srchgms').val().toLowerCase();
+              
               if (name.toLowerCase().includes(value))
               {
-              $('.game-prev').append(`
-              <a href="${url}" class="search-game">
+                
+                $('.game-prev').append(`
+              <a href="${url}" class="search-game" id="${index}">
                 <div class="row">
                   <div class="col-3" style="padding: 0px;">
                     <img src="${img}" alt="">
@@ -52,6 +55,7 @@ $(document).ready(function () {
               </a>
               
               `)
+                
               }
             });
             if ($('.game-prev').html() == ""){$('.game-prev').css('display', 'none'); $('.srchgms').css({'border-bottom-left-radius': '4px', 'border-bottom-right-radius': '4px'})}
