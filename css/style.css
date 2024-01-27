@@ -13,6 +13,9 @@
   bottom: 30px;
   font-size: 17px;
 }
+.bottom-container{
+  display: none !important;
+}
 
 #snackbar.show {
   visibility: visible;
