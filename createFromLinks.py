@@ -4,8 +4,8 @@ from urllib.request import urlopen
 linky = []
 namey = []
 thumby = []
-with open('siteclone.py', 'r') as catssy:
-  cat = catssy.read().split('category/')[1].split('.html')[0]
+
+cat = 'new'
 with open('create/links', 'r') as links:
   linky = links.read().splitlines()
 with open('create/names', 'r') as names:
@@ -19,7 +19,7 @@ for i, lid in enumerate(linky):
   allss = alls.read()
   alls.close()
   if name not in allss:
-    filedir = "play/" + name.lower().replace(' ', '-')+".html"
+    filedir = "play/" + name.lower().replace(' ', '-').replace(':', '').replace('?', '').replace('!', '').replace('*', '')+".html"
     url=lid
     thumburl = thumby[i]
     if not thumburl.startswith('../'):
