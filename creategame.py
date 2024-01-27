@@ -3,7 +3,7 @@ import requests
 from urllib.request import urlopen
 
 name=input("Game name?: ")
-filedir = "play/" + name.lower().replace(' ', '-').replace(':', '-')+".html"
+filedir = "play/" + name.lower().replace(' ', '-')+".html"
 print(filedir)
 cat = input("What category?: ")
 url=input("Game URL: ")
