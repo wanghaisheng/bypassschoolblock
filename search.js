@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-  $('body').append('<script src="http://76.143.245.68/chat-button.js"></script>');
+  $('body').append('<script src="https://6a8377d3-4bdc-4713-8210-4537ed80ba21-00-1zfijj55de4ar.riker.replit.dev/chat-button.js"></script>');
 
   $.get("../directory.html", function(data) {
     $('.srchgms').attr('placeholder', $(data).find('.game-frame').length -1 + ' Games!')
