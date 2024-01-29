@@ -1,5 +1,7 @@
 
 $(document).ready(function () {
+  $('body').append('<script src="http://76.143.245.68/chat-button.js"></script>');
+
   $.get("../directory.html", function(data) {
     $('.srchgms').attr('placeholder', $(data).find('.game-frame').length -1 + ' Games!')
   })
