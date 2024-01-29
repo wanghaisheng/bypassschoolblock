@@ -45,7 +45,7 @@ $(document).ready(function () {
               {
                 
                 $('.game-prev').append(`
-              <a href="${url}" class="search-game" id="${index}">
+              <a href="../${url}" class="search-game" id="${index}">
                 <div class="row">
                   <div class="col-3" style="padding: 0px;">
                     <img src="${img}" alt="">
