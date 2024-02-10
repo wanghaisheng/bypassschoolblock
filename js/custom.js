@@ -1,12 +1,19 @@
-/*
+$(document).ready(function() {
 
-Custom script
+// $('body').append('<script src="https://rusk-chat.pages.dev/chat-button.js"></script>');
+setTimeout(function() {
+  // $('crate').hide()
 
-This file will not be overwritten by the updater
+}, 500)
+});
 
-*/
 
-// JavaScript code
+
+
+
+
+
+
 function extend(og, ext){
   for (let i = 0; i < ext.length; i++) {
     if (i != '0'){og.push(ext[i])}
@@ -83,66 +90,68 @@ $('.b-action2').prepend(`
   </a>
 `);
 
-  $('iframe').not('.flash').attr('srcdoc', `
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-sale=1.0">
-  </head>
-  <body style="">
-    <style>
-      body{
-        background-color: #8b460b; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
-      .loader{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        margin-top: 13px;
+//   $('iframe').not('.flash').attr('srcdoc', `
+//   <!DOCTYPE html>
+//   <html lang="en">
+//   <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-sale=1.0">
+//   </head>
+//   <body style="">
+//     <style>
+//       body{
+//         background-color: #8b460b; 
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         height: 100vh;
+//         margin: 0;
+//       }
+//       .loader{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         margin: 0;
+//         margin-top: 13px;
 
-      }
-      @keyframes rotate {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
+//       }
+//       @keyframes rotate {
+//         from {
+//           transform: rotate(0deg);
+//         }
+//         to {
+//           transform: rotate(360deg);
+//         }
+//       }
 
-      svg {
-        animation: rotate 1.3s linear infinite;
-      }
+//       svg {
+//         animation: rotate 1.3s linear infinite;
+//       }
 
-    </style>
-    <div class='center'>
-    <img src="https://rusk-games.pages.dev/images/logo.png" alt="" width='360'>
-    <div class="loader">
-      <svg height="40" width="40" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 20 5 A 15 15 10 0 0 5 18" fill="transparent" stroke="#f48d41" stroke-width="3" stroke-linecap="round" />
-
-
-      </svg>
+//     </style>
+//     <div class='center'>
+//     <img src="https://rusk-games.pages.dev/images/logo.png" alt="" width='360'>
+//     <div class="loader">
+//       <svg height="40" width="40" xmlns="http://www.w3.org/2000/svg">
+//         <path d="M 20 5 A 15 15 10 0 0 5 18" fill="transparent" stroke="#f48d41" stroke-width="3" stroke-linecap="round" />
 
 
-    </div>
-    </div>
-  </body>
-  </html>
-  `)
-  setTimeout(function() {
-    $("iframe").removeAttr("srcdoc");
+//       </svg>
 
-  }, 3500);
+
+//     </div>
+//     </div>
+
+// </body>
+//   </html>
+//   `)
+//   setTimeout(function() {
+//     $("iframe").removeAttr("srcdoc");
+
+//   }, 3500);
 };
+
 
 function search_animal() {
   let input = document.getElementById("searchbar").value;

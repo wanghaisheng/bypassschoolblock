@@ -1,6 +1,6 @@
 // https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fcannon-basketball.xml
 $(document).ready(function () {
-  $('body').append('<script src="https://rusk-chat.pages.dev/chat-button.js"></script>');
+
 
   $.get("../directory.html", function(data) {
     $('.srchgms').attr('placeholder', $(data).find('.game-frame').length -1 + ' Games!')

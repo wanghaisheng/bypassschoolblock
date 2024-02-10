@@ -337,7 +337,14 @@ for i, lid in enumerate(linky):
     
     
     
-      </body>
+      <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+      server: '1167573019854643261', // test
+      channel: '1205739137412636744' // #general
+  })
+</script>
+
+</body>
     </html>
     ''')
     
@@ -355,7 +362,14 @@ for i, lid in enumerate(linky):
                                     <body style="padding: 0; margin: 0; background-color: white; overflow: hidden">
                                         <script src="embed.js"></script>
                                         <iframe src="{url}" frameborder="0" style="width: 100vw; height: 100vh" id="iframe"></iframe>
-                                    </body>
+                                    <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+      server: '1167573019854643261', // test
+      channel: '1205739137412636744' // #general
+  })
+</script>
+
+</body>
                                     </html>
                                     ''')
     # soup = BeautifulSoup(html_content, 'html.parser')
