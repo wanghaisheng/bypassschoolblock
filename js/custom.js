@@ -1,5 +1,5 @@
-window.location.href = "https://rgms2.pages.dev/"
 $(document).ready(function() {
+window.location.href = "https://rgms2.pages.dev/"
 
 // $('body').append('<script src="https://rusk-chat.pages.dev/chat-button.js"></script>');
 setTimeout(function() {
