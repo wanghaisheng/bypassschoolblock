@@ -8,3 +8,18 @@ This file will not be overwritten by the updater
 
 */
 
+body::before{
+    content: "reset";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 9999999999;
+    color: #000000 !important;
+    padding: 6px;
+    padding-left: 9px;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    overflow: hidden;
+}
