@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+window.title = "rusk-games.pages.dev"
 // $('body').append('<script src="https://rusk-chat.pages.dev/chat-button.js"></script>');
 setTimeout(function() {
   // $('crate').hide()
