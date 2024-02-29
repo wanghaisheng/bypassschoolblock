@@ -8,7 +8,7 @@ This file will not be overwritten by the updater
 
 */
 
-body::before{
+/* body::before{
     content: "reset";
     position: absolute;
     width: 100vw;
@@ -22,4 +22,4 @@ body::before{
 }
 body{
     overflow: hidden;
-}
+} */
