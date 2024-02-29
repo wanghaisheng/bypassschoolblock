@@ -31,14 +31,7 @@ for root, dirs, files in os.walk(folder_path):
                                 <body style="padding: 0; margin: 0; background-color: white; overflow: hidden">
                                     <script src="embed.js"></script>
                                     <iframe src="{src}" frameborder="0" style="width: 100vw; height: 100vh" id="iframe"></iframe>
-                                <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-    new Crate({
-      server: '1167573019854643261', // test
-      channel: '1205739137412636744' // #general
-  })
-</script>
-
-</body>
+                                </body>
                                 </html>
                                 ''')
                 print(src, name)

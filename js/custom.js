@@ -1,19 +1,12 @@
-$(document).ready(function() {
-// window.title = "rusk-games.pages.dev"
-// $('body').append('<script src="https://rusk-chat.pages.dev/chat-button.js"></script>');
-setTimeout(function() {
-  // alert("this link is blocked go to https://rgms2.pages.dev/    !!!!!")
+/*
 
-}, 500)
-});
+Custom script
 
+This file will not be overwritten by the updater
 
+*/
 
-
-
-
-
-
+// JavaScript code
 function extend(og, ext){
   for (let i = 0; i < ext.length; i++) {
     if (i != '0'){og.push(ext[i])}
@@ -80,15 +73,15 @@ window.onload = function() {
   // }
   // checkBlocked()
   var chatbtn = document.createElement('script');
-  chatbtn.src='https://chat.rusk2016.repl.co/chat-button.js';
+  chatbtn.src='https://rusk-chat.pages.dev/chat-button.js';
   chatbtn.setAttribute('width', '300px');
   chatbtn.setAttribute('height', '450px');
   $('body').append(chatbtn)
-$('.b-action2').prepend(`
-  <a href="#" onclick="embed()" data-bs-toggle="modal" data-bs-target="#embed" class="btn btn-capsule">
-    <i class="bi bi-file-earmark-code" style="margin-right: 2px;"></i>Embed
-  </a>
-`);
+// $('.b-action2').prepend(`
+//   <a href="#" onclick="embed()" data-bs-toggle="modal" data-bs-target="#embed" class="btn btn-capsule">
+//     <i class="bi bi-file-earmark-code" style="margin-right: 2px;"></i>Embed
+//   </a>
+// `);
 
 //   $('iframe').not('.flash').attr('srcdoc', `
 //   <!DOCTYPE html>
@@ -142,8 +135,7 @@ $('.b-action2').prepend(`
 
 //     </div>
 //     </div>
-
-// </body>
+//   </body>
 //   </html>
 //   `)
 //   setTimeout(function() {
@@ -151,7 +143,6 @@ $('.b-action2').prepend(`
 
 //   }, 3500);
 };
-
 
 function search_animal() {
   let input = document.getElementById("searchbar").value;

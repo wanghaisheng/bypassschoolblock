@@ -1440,14 +1440,7 @@ with open(filedir, 'w') as game:
 
 
 
-  <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-    new Crate({
-      server: '1167573019854643261', // test
-      channel: '1205739137412636744' // #general
-  })
-</script>
-
-</body>
+  </body>
 </html>
 ''')
 
@@ -1465,14 +1458,7 @@ with open(f'embed/{filedir[5:]}', 'w') as game:
                                 <body style="padding: 0; margin: 0; background-color: white; overflow: hidden">
                                     <script src="embed.js"></script>
                                     <iframe src="{url}" frameborder="0" style="width: 100vw; height: 100vh" id="iframe"></iframe>
-                                <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-    new Crate({
-      server: '1167573019854643261', // test
-      channel: '1205739137412636744' // #general
-  })
-</script>
-
-</body>
+                                </body>
                                 </html>
                                 ''')
 # soup = BeautifulSoup(html_content, 'html.parser')
