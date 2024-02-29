@@ -1,8 +1,8 @@
 $(document).ready(function() {
-window.title = "rusk-games.pages.dev"
+// window.title = "rusk-games.pages.dev"
 // $('body').append('<script src="https://rusk-chat.pages.dev/chat-button.js"></script>');
 setTimeout(function() {
-  alert("this link is blocked go to https://rgms2.pages.dev/    !!!!!")
+  // alert("this link is blocked go to https://rgms2.pages.dev/    !!!!!")
 
 }, 500)
 });
